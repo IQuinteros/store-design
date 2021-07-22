@@ -1,0 +1,29 @@
+.section.section--stores
+    max-width: 1600px
+    margin: 0 auto
+    .section--stores__container
+        display: grid
+        gap: 2px
+        .store
+            background-color: $light-color
+            padding: 20px
+            display: grid
+            gap: 20px
+            font-size: 1.6rem
+            img
+                aspect-ratio: 16/9
+
+@media screen and ( min-width: 768px )
+    .section.section--stores
+        .section--stores__container
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr))
+            .store
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: auto 1fr
+                img
+                    grid-row: span 2
+                    height: 100%
+                    max-height: 200px
+                    aspect-ratio: unset
+
+    

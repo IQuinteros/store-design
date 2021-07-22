@@ -14,11 +14,11 @@
 </head>
 <body>
     <header class="header">
-        <a class="header__logo" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt=""></a>
+        <a class="header__logo" href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt=""></a>
         <button class="header__nav-button">
             <span class="material-icons material-icons-outlined">menu</span>
         </button>
-        <form action="#" method="get">
+        <form action="search.html" method="get">
             <span class="material-icons material-icons-outlined">search</span>
             <input type="text" name="search" placeholder="Buscar artículos">
             <input type="submit" value="Buscar">
@@ -69,33 +69,43 @@
         <section class="section section--products">
             <h1 class="section__title">Productos destacados</h1>
             <div class="products-grid">
-                <article class="product-item product-item--medium">
+                <article data-prod-id="1" class="product-item product-item--medium">
                     <img src="https://source.unsplash.com/random/2" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
                     <p class="product-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam accusantium tempora eum error autem laudantium nostrum soluta repudiandae? Aliquid praesentium voluptatem mollitia eveniet vero? Vel libero ipsam dignissimos facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam accusantium tempora eum error autem laudantium nostrum soluta repudiandae? Aliquid praesentium voluptatem mollitia eveniet vero? Vel libero ipsam dignissimos facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam accusantium tempora eum error autem laudantium nostrum soluta repudiandae? Aliquid praesentium voluptatem mollitia eveniet vero? Vel libero ipsam dignissimos facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam accusantium tempora eum error autem laudantium nostrum soluta repudiandae? Aliquid praesentium voluptatem mollitia eveniet vero? Vel libero ipsam dignissimos facere!</p>
                 </article>
-                <article class="product-item">
+                <article data-prod-id="2" class="product-item">
                     <img src="https://source.unsplash.com/random/3" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
                 </article>
-                <article class="product-item">
+                <article data-prod-id="3" class="product-item">
                     <img src="https://source.unsplash.com/random/4" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
                 </article>
-                <article class="product-item">
+                <article data-prod-id="4" class="product-item">
                     <img src="https://source.unsplash.com/random/5" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
                 </article>
-                <article class="product-item">
+                <article data-prod-id="5" class="product-item">
                     <img src="https://source.unsplash.com/random/6" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
                 </article>
-                <article class="product-item">
+                <article data-prod-id="6" class="product-item">
+                    <img src="https://source.unsplash.com/random/7" alt="">
+                    <h1>$ 30.000</h1>
+                    <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
+                </article>
+                <article data-prod-id="5" class="product-item product-item--wide">
+                    <img src="https://source.unsplash.com/random/6" alt="">
+                    <h1>$ 30.000</h1>
+                    <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
+                </article>
+                <article data-prod-id="6" class="product-item">
                     <img src="https://source.unsplash.com/random/7" alt="">
                     <h1>$ 30.000</h1>
                     <p>Nombre del producto que puede ser increíblemente demasiado largo</p>
@@ -105,9 +115,11 @@
     </main>
 
     <footer class="footer">
-        <p>Bienvenido a Zeak</p>
+        <p>Bienvenido a Zeak Store</p>
         <hr>
-        <p>Productos tecnológicos</p>
+        <a href="stores.html">Nuestras tiendas</a>
     </footer>
+
+    <script src="js/style.js"></script>
 </body>
 </html>

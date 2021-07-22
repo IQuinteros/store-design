@@ -38,7 +38,9 @@ a {
   top: 60px;
 }
 
-.section.section--products {
+.section.section--products,
+.section.section--results,
+.section.section--recommended {
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -176,10 +178,12 @@ a {
   left: 0;
   max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .section--cover .cover-item img {
   width: 100%;
   height: 100%;
+  transition: 0.3s transform;
 }
 .section--cover .cover-item .cover-item__info {
   background-color: rgba(0, 0, 0, 0.5);
@@ -202,6 +206,9 @@ a {
 .section--cover .cover-item .cover-item__info h1 {
   margin-bottom: 10px;
   font-size: 2.5rem;
+}
+.section--cover .cover-item:hover img {
+  transform: scale(1.2);
 }
 .section--cover .cover-item:hover .cover-item__info {
   opacity: 1;
@@ -264,29 +271,34 @@ a {
 }
 
 @media screen and (min-width: 700px) {
-  .product-item.product-item--medium {
+  .product-item.product-item--medium,
+.product-item.product-item--wide {
     grid-column: span 2;
     grid-row: span 5;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto minmax(1fr, 50px);
   }
-  .product-item.product-item--medium img {
+  .product-item.product-item--medium img,
+.product-item.product-item--wide img {
     height: 100%;
     aspect-ratio: unset;
     grid-row: span 3;
   }
-  .product-item.product-item--medium h1 {
+  .product-item.product-item--medium h1,
+.product-item.product-item--wide h1 {
     font-size: 2.5rem;
     margin-top: 10px;
     order: 2;
   }
-  .product-item.product-item--medium p {
+  .product-item.product-item--medium p,
+.product-item.product-item--wide p {
     align-self: flex-end;
     font-size: 1.8rem;
     order: 1;
   }
-  .product-item.product-item--medium .product-item__description {
+  .product-item.product-item--medium .product-item__description,
+.product-item.product-item--wide .product-item__description {
     font-size: 1.5rem;
     display: -webkit-box;
     overflow: hidden;
@@ -296,6 +308,11 @@ a {
     order: 3;
     color: gray;
     font-style: italic;
+  }
+
+  .product-item.product-item--wide {
+    grid-row: span 3;
+    grid-template-rows: 1fr 1fr;
   }
 }
 .footer {
@@ -320,6 +337,97 @@ a {
 @media screen and (min-width: 768px) {
   .main {
     padding-top: 5px;
+  }
+}
+.article-overview {
+  background-color: #F0F4EF;
+  display: grid;
+  gap: 20px;
+  padding-bottom: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.article-overview .section--overview {
+  display: grid;
+  gap: 15px;
+  font-size: 1.6rem;
+}
+.article-overview .section--overview h1,
+.article-overview .section--overview div {
+  padding: 0 20px;
+}
+.article-overview .section--overview h1 {
+  padding-top: 10px;
+}
+.article-overview .section--overview img {
+  height: 50vh;
+  max-height: 400px;
+}
+.article-overview .section--overview .section--overview__row {
+  display: grid;
+  gap: 15px;
+}
+.article-overview .section--description {
+  padding: 0 20px;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article-overview {
+    gap: 0;
+  }
+  .article-overview .section--overview {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
+  }
+  .article-overview .section--overview h1 {
+    align-self: center;
+  }
+  .article-overview .section--overview img {
+    grid-row: span 3;
+  }
+  .article-overview .section--overview .section--overview__row p {
+    align-self: flex-end;
+  }
+  .article-overview .section--overview .section--overview__row h1 {
+    align-self: flex-start;
+  }
+  .article-overview .section--description {
+    padding-top: 20px;
+  }
+}
+.section.section--stores {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.section.section--stores .section--stores__container {
+  display: grid;
+  gap: 2px;
+}
+.section.section--stores .section--stores__container .store {
+  background-color: #F0F4EF;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  font-size: 1.6rem;
+}
+.section.section--stores .section--stores__container .store img {
+  aspect-ratio: 16/9;
+}
+
+@media screen and (min-width: 768px) {
+  .section.section--stores .section--stores__container {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+  .section.section--stores .section--stores__container .store {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .section.section--stores .section--stores__container .store img {
+    grid-row: span 2;
+    height: 100%;
+    max-height: 200px;
+    aspect-ratio: unset;
   }
 }
 

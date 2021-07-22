@@ -1,0 +1,44 @@
+.article-overview
+    background-color: $light-color
+    display: grid
+    gap: 20px
+    padding-bottom: 20px
+    max-width: 1600px
+    margin: 0 auto
+    .section--overview
+        display: grid
+        gap: 15px
+        font-size: 1.6rem
+        h1,
+        div
+            padding: 0 20px
+        h1
+            padding-top: 10px
+        img
+            height: 50vh
+            max-height: 400px
+        .section--overview__row
+            display: grid
+            gap: 15px
+    .section--description
+        padding: 0 20px
+        font-size: 1.6rem
+
+@media screen and ( min-width: 768px )
+    .article-overview
+        gap: 0
+        .section--overview
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 0.8fr 1fr
+            h1
+                align-self: center
+            img
+                grid-row: span 3
+            .section--overview__row
+                p
+                    align-self: flex-end
+                h1
+                    align-self: flex-start
+
+        .section--description
+            padding-top: 20px

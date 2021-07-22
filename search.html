@@ -13,21 +13,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeak</title>
-</head>
-<body>
     <header class="header">
-        <a class="header__logo" href="#"><img src="" alt=""></a>
+        <a class="header__logo" href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt=""></a>
         <button class="header__nav-button">
             <span class="material-icons material-icons-outlined">menu</span>
         </button>
-        <form action="#" method="get">
+        <form action="search.html" method="get">
+            <span class="material-icons material-icons-outlined">search</span>
             <input type="text" name="search" placeholder="Buscar artículos">
             <input type="submit" value="Buscar">
         </form>
@@ -43,7 +35,7 @@
 
     <main class="main">
         <section class="section section--results">
-            <h1>Resultados de búsqueda</h1>
+            <h1 class="section__title">Resultados de búsqueda</h1>
             <div class="products-grid">
                 <article class="product-item">
                     <img src="https://source.unsplash.com/random/3" alt="">
@@ -90,11 +82,11 @@
     </main>
 
     <footer class="footer">
-        <p>Bienvenido a Zeak</p>
+        <p>Bienvenido a Zeak Store</p>
         <hr>
-        <p>Productos tecnológicos</p>
+        <a href="stores.html">Nuestras tiendas</a>
     </footer>
-</body>
-</html>
+
+    <script src="js/style.js"></script>
 </body>
 </html>
