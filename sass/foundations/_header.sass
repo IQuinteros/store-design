@@ -1,0 +1,17 @@
+@import '../mixins/basics'
+    
+header
+    @include shadow($blur: 3)
+    background-color: $light-color
+    padding: 10px 20px
+    width: 100%
+    display: grid
+    grid-template-columns: auto 1fr
+    form
+        display: flex
+        width: 100%
+        input
+            width: 100%
+        input[type=submit]
+            display: none
+   
