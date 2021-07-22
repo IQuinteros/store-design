@@ -1,0 +1,54 @@
+.section--cover
+    position: relative 
+    margin-bottom: 20px
+    width: 100%
+    height: 50vh
+    min-height: 150px
+    max-height: 400px
+    overflow: hidden
+    .cover-item
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        img
+            width: 100%
+            height: 100%
+        .cover-item__info
+            background-color: rgba(0, 0, 0, 0.5)
+            color: $light-color 
+            position: absolute
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-flow: column
+            font-size: 1.6rem
+            padding: 10px
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            text-align: center
+            opacity: 0
+            transition: 0.3s opacity
+            h1
+                margin-bottom: 10px
+                font-size: 2.5rem
+    .cover-item:hover
+        .cover-item__info
+            opacity: 1
+    .section--cover__control
+        border: none
+        position: absolute
+        color: $light-color
+        top: 0
+        bottom: 0
+        width: 40px
+        background-color: rgba(0, 0, 0, 0.25)
+        z-index: 10
+        outline: none
+    .section--cover__control.control--left
+        left: 0
+    .section--cover__control.control--right
+        right: 0

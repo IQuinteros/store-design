@@ -1,16 +1,32 @@
 @import '../mixins/basics'
     
 .header
-    @include shadow($blur: 3)
-    background-color: $light-color
-    padding: 10px 20px
+    @include shadow($vertical: 3, $horizontal: 0, $blur: 3)
+    background-color: $primary-color
+    color: $light-color
+    padding: 10px
     width: 100%
     display: grid
     grid-template-columns: auto 1fr
+    gap: 10px
+    grid-template-areas: "button form"
+    position: fixed
+    z-index: 20
+    .header__logo
+        grid-area: logo
+        display: none
+    .header__nav-button
+        color: $light-color
+        grid-area: button
+        border: none
+        outline: none
+        background-color: transparent
     form
+        grid-area: form
         display: flex
         width: 100%
         input
+            font-size: 1.6rem
             width: 100%
         input[type=submit]
             display: none
