@@ -1,17 +1,56 @@
 .products-grid
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    grid-auto-rows: minmax(min-content, 70px)
     gap: 5px
 
 .product-item
     @include shadow($vertical: 3, $blur: 3)
     background-color: $light-color
+    cursor: pointer
+    grid-row: span 4
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: auto auto auto
     gap: 10px
     padding: 20px
     font-size: 1.6rem
+    transition: 0.3s box-shadow, 0.3s transform
     img
         width: 100%
         aspect-ratio: 12/9
+    .product-item__description
+        display: none
+.product-item:hover
+    @include shadow($vertical: 3, $blur: 10, $opacity: 0.5)
+    transform: scale(1.01)
+
+@media screen and ( min-width:  700px)
+    .product-item.product-item--medium
+        grid-column: span 2
+        grid-row: span 5
+        gap: 20px
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto minmax(1fr, 50px)
+        img
+            height: 100%
+            aspect-ratio: unset
+            grid-row: span 3
+        h1
+            font-size: 2.5rem
+            margin-top: 10px
+            order: 2
+        p
+            align-self: flex-end
+            font-size: 1.8rem
+            order: 1
+        .product-item__description
+            font-size: 1.5rem
+            display: -webkit-box
+            overflow: hidden
+            text-overflow: ellipsis
+            -webkit-line-clamp: 7
+            -webkit-box-orient: vertical
+            order: 3
+            color: gray
+            font-style: italic

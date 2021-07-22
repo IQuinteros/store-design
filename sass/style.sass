@@ -4,6 +4,7 @@ $black-color: #0A0F0D
 $light-color: #F0F4EF
 $gray-color: #C4CBCA
 $accent-color: #3CBBB1
+$blue-color: #0075C4
     
 *
     box-sizing: border-box
@@ -21,13 +22,18 @@ img
     object-fit: cover
     width: 100%
 
-.main
-    padding-top: 20px
-    min-height: 90vh
+input
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif
 
+a
+    color: $accent-color
+    text-decoration: none
+
+@import mixins/basics
 @import foundations/sections
 @import foundations/header
 @import foundations/nav
 @import foundations/cover
 @import foundations/items
 @import foundations/footer
+@import foundations/main

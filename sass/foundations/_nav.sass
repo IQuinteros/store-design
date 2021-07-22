@@ -1,2 +1,36 @@
 .nav
     display: none
+
+@media screen and ( min-width:  768px)
+    .nav
+        @include shadow($vertical: 3, $horizontal: 0, $blur: 3)
+        background-color: $light-color
+        display: block
+        padding: 70px 10px 10px 10px
+        ul
+            display: grid
+            grid-template-rows: 1fr
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+            justify-content: center
+            max-width: 1920px
+            margin: 0 auto
+            gap: 20px
+            li
+                display: block
+                font-size: 1.6rem
+                font-weight: 600
+                padding: 0
+                width: 100%
+                a
+                    border-radius: 5px
+                    color: $secondary-color
+                    display: block
+                    width: 100%
+                    text-align: center
+                    padding: 10px 20px
+                    transition: 0.3s background-color
+                a:hover
+                    background-color: $accent-color
+                    color: $secondary-color
+                    font-weight: bold
+    

@@ -1,12 +1,12 @@
-@import '../mixins/basics'
-    
 .header
     @include shadow($vertical: 3, $horizontal: 0, $blur: 3)
+    align-items: center
     background-color: $primary-color
     color: $light-color
     padding: 10px
     width: 100%
     display: grid
+    height: 60px
     grid-template-columns: auto 1fr
     gap: 10px
     grid-template-areas: "button form"
@@ -15,6 +15,10 @@
     .header__logo
         grid-area: logo
         display: none
+        height: 30px
+        img
+            height: 100%
+            width: auto
     .header__nav-button
         color: $light-color
         grid-area: button
@@ -25,9 +29,29 @@
         grid-area: form
         display: flex
         width: 100%
+        padding: 5px 10px
+        border-radius: 5px
+        background-color: $light-color
         input
+            background-color: transparent
+            border: none
+            outline: none
             font-size: 1.6rem
             width: 100%
         input[type=submit]
             display: none
+        span
+            color: gray
+            margin-right: 10px
+
+@media screen and ( min-width: 768px )
+    .header
+        padding: 10px 20px
+        gap: 20px
+        grid-template-areas: "logo form"
+        .header__nav-button
+            display: none
+        .header__logo
+            display: block
+    
    
