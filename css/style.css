@@ -377,6 +377,16 @@ a {
   font-size: 1.6rem;
   text-align: center;
 }
+.footer a {
+  color: #F0F4EF;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s text-shadow, 0.3s font-size;
+}
+.footer a:hover {
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+}
 
 .main {
   padding-top: 60px;
