@@ -418,6 +418,9 @@ a {
   padding: 0 20px;
   font-size: 1.6rem;
 }
+.article-overview .section--description ul {
+  padding: 20px;
+}
 
 @media screen and (min-width: 768px) {
   .article-overview {
